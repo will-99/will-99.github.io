@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2017/9 | Will-99的日常</title>
+  <title>test | Will-99的日常</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -166,78 +166,58 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/十二.png) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/09/07/test/">test</a></h4>
-                            
-                            <p><time datetime="2017-09-07T07:14:16.000Z"><a href="/2017/09/07/test/">2017-09-07</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2017/09/07/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2017-09-07T02:55:08.267Z"><a href="/2017/09/07/hello-world/">2017-09-07</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-09-07T07:14:16.000Z" itemprop="datePublished">
+          2017-09-07
+      </time>
+    
+</span>
+                <h1>test</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p><code>Generator</code>函数是ES6提供的一种异步编程解决方案。<strong><code>Generator</code>函数只有调用<code>next</code>方法时，函数才会真正的执行。</strong></p>
+<p><code>Generator</code>函数有两个特征：</p>
+<ol>
+<li><code>function</code>关键字与函数名之间有一个星号。</li>
+<li>函数体内部用<code>yield</code>表达式，定义不同的内部状态。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">helloWorldGenerator</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">yield</span> <span class="string">'hello'</span>;</div><div class="line">    <span class="keyword">yield</span> <span class="string">'world'</span>;</div><div class="line">    <span class="keyword">return</span> <span class="string">'ending'</span>;</div><div class="line">    </div><div class="line">    <span class="keyword">var</span> hw = helloWorldGenerator();</div><div class="line">    </div><div class="line">    hw.next();<span class="comment">//&#123;value: 'hello', done: false&#125;</span></div><div class="line">    hw.next();<span class="comment">//&#123;value: 'world', done: false&#125;</span></div><div class="line">    hw.next();<span class="comment">//&#123;value: 'ending', done: true&#125;</span></div><div class="line">    hw.next();<span class="comment">//&#123;value: undefined, done: true&#125;</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>Generator()</code>函数这样被调用后，该函数并执行，<strong>返回的是一个指向内部状态的指针对象</strong>。下一步必须调用遍历器对象的<code>next</code>方法，使得指针移向下一个状态。每次调用<code>next</code>方法，内部指针就从函数头部或上一次停下来的地方开始执行，直到遇到<code>yield</code>或<code>return</code>。<code>Generator</code>函数是分段执行的，遇到<code>yield</code>会暂停执行，<code>next</code>方法可以恢复执行。</p>
+<h1 id="yield表达式"><a href="#yield表达式" class="headerlink" title="yield表达式"></a><code>yield</code>表达式</h1><p>遍历器对象的<code>next</code>方法的运行逻辑如下：</p>
+<ol>
+<li>遇到<code>yield</code>表达式就暂停执行，并将<code>yield</code>后面的表达式，作为返回对象的<code>value</code>的属性值。</li>
+<li>下一次调用<code>next</code>方法则继续往下执行，直到遇到下一个<code>yield</code>。</li>
+<li>如果没有再遇到新的<code>yield</code>表达式，就一直运行到函数结束，直到<code>return</code>语句为止，并将<code>return</code>语句后面的表达式的值，作为返回的对象的<code>value</code>属性值。</li>
+<li>如果没有<code>return</code>语句，则返回的对象的<code>value</code>属性值为<code>undefined</code>。</li>
+</ol>
+<h1 id="next方法的参数"><a href="#next方法的参数" class="headerlink" title="next方法的参数"></a><code>next</code>方法的参数</h1><p><strong><code>yield</code>表达式本身没有返回值</strong>，即返回的总是<code>undefined</code>。<code>next</code>方法可以带一个参数，该参数就会被当做上一个<code>yield</code>表达式的返回值。</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2017/09/07/hello-world/">
+        Hello World →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
