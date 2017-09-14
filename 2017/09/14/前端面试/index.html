@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>前端面试 | Will-99的日常</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Will-99的日常">
+    <meta name="author" content="Wpfei">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Will-99的日常" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/+=.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Will-99的日常</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/will-99" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-09-14T01:36:39.000Z" itemprop="datePublished">
+          2017-09-14
+      </time>
+    
+</span>
+                <h1>前端面试</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="Cookie、sessionStorage、localStorage的区别"><a href="#Cookie、sessionStorage、localStorage的区别" class="headerlink" title="Cookie、sessionStorage、localStorage的区别"></a>Cookie、sessionStorage、localStorage的区别</h2><ol>
+<li><strong>存储大小限制不同</strong>：<ul>
+<li>cookie数据不能超过4k，因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。</li>
+<li>sessionStorage和localStorage虽然也有存储大小的限制，但比cookie大很多，可以达到5M或更大。</li>
+</ul>
+</li>
+<li><strong>数据有效期不同</strong>：<ul>
+<li>cookie在设置的cookie过期时间之前一直有效。</li>
+<li>sessionStorage在页面或者浏览器关闭后被清除。</li>
+<li>localStorage除非主动删除，否则一直有效。</li>
+</ul>
+</li>
+<li><strong>与服务器端通信不同</strong>：<ul>
+<li>cookie数据始终在同源的http请求中携带(即使不需要)，即cookie在浏览器和服务器之间来回传递。</li>
+<li>sessionStorage和localStorage仅在本地保存，不会自动把数据发给服务器。</li>
+</ul>
+</li>
+<li><strong>作用域不同</strong>：<ul>
+<li>cookie在所有同源窗口中共享。</li>
+<li>sessionStorage在不同的浏览器窗口中不能共享(即使是同一个页面)。</li>
+<li>localStorage在所有的同源窗口中共享。</li>
+</ul>
+</li>
+</ol>
+<h3 id="Web-Storage的好处"><a href="#Web-Storage的好处" class="headerlink" title="Web Storage的好处"></a>Web Storage的好处</h3><ol>
+<li>减少网络流量：一旦数据保存在本地后，就可以避免再向服务器请求数据，因此减少不必要的数据请求，减少数据在浏览器和服务器之间不必要地来回传递。</li>
+<li>快速显示数据：性能好，从本地读取数据比通过网络从服务器获取数据快得多，本地数据可以即时获得。在加上网页本身可以有缓存，因此整个页面和数据都在本地的话，可以立即显示。</li>
+<li>临时存储：很多时候数据只需要在用户浏览一组页面期间使用，关闭窗口后就可以丢弃了，这种情况使用sessionStorage非常方便。</li>
+</ol>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>因为考虑到每个 HTTP 请求都会带着 Cookie 的信息，所以 Cookie 当然是能精简就精简啦，比较常用的一个应用场景就是判断用户是否登录。针对登录过的用户，服务器端会在他登录时往 Cookie 中插入一段加密过的唯一辨识单一用户的辨识码，下次只要读取这个值就可以判断当前用户是否登录啦。曾经还使用 Cookie 来保存用户在电商网站的购物车信息，如今有了 localStorage，似乎在这个方面也可以给 Cookie 放个假了~</p>
+<p>而另一方面 localStorage 接替了 Cookie 管理购物车的工作，同时也能胜任其他一些工作。比如HTML5游戏通常会产生一些本地数据，localStorage 也是非常适用的。如果遇到一些内容特别多的表单，为了优化用户体验，我们可能要把表单页面拆分成多个子页面，然后按步骤引导用户填写。这时候 sessionStorage 的作用就发挥出来了。</p>
+<hr>
+<h1 id="JSONP跨域原理"><a href="#JSONP跨域原理" class="headerlink" title="JSONP跨域原理"></a>JSONP跨域原理</h1><p>在页面上有三种资源是可以与页面本身不同源：</p>
+<ul>
+<li>js脚本</li>
+<li>CSS样式文件</li>
+<li>图片</li>
+</ul>
+<p>当连接的资源到达浏览器时，浏览器会根据他们的类型来采取不同的处理方式：</p>
+<ul>
+<li>CSS文件：对页面进行repaint</li>
+<li>img：将图片渲染出来</li>
+<li>script脚本：进行执行</li>
+</ul>
+<p>JOSNP是利用script标签可以链接到不同源的js脚本，来达到跨域的目的，将使用json格式的数据用一个函数包裹起来，然后在进行访问的页面中定义一个相同函数名的函数，因为script标签src引用的js脚本到达浏览器时会执行，而此时已经定义了一个同名的函数，所以json格式的数据，就作为参数传递给了我们定义的同名函数了，这样就完成了跨域数据交换。</p>
+<hr>
+<h1 id="Get和Post的区别"><a href="#Get和Post的区别" class="headerlink" title="Get和Post的区别"></a>Get和Post的区别</h1><p>GET一般用于获取/查询资源信息，而POST一般用于更新资源信息。</p>
+<ol>
+<li>GET请求的数据会附在URL之后，POST把提交的数据放置在HTTP包的包体中。</li>
+<li>浏览器和服务器对GET请求和POST请求的数据大小限制不同，GET较小，POST大很多。</li>
+<li>GET在浏览器回退时是无害的，而POST会再次提交请求。</li>
+<li>GET产生的URL地址可以被Bookmark，而POST不可以。</li>
+<li>GET请求会被浏览器主动cache，而POST不会，除非手动设置。</li>
+<li>GET请求的参数会完整的被保存在历史记录里，POST不会。</li>
+<li>GET请求参数放在URL中，POST放在request body中。</li>
+<li>GET请求只能进行url编码，POST请求支持多种编码方式。</li>
+<li>对于参数类型，GET只接受ASCII字符，而POST没有限制。</li>
+<li>GET请求在URL中传递的参数是有长度限制的，而POST没有。</li>
+<li>GET比POST更不安全，因为参数直接暴露在URL中，所以不能传递敏感信息。</li>
+</ol>
+<hr>
+<h1 id="什么是-“use-strict”-使用它的好处和坏处分别是什么？"><a href="#什么是-“use-strict”-使用它的好处和坏处分别是什么？" class="headerlink" title="什么是 “use strict”? 使用它的好处和坏处分别是什么？"></a>什么是 “use strict”? 使用它的好处和坏处分别是什么？</h1><ol>
+<li>消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;</li>
+<li>消除代码运行的一些不安全之处，保证代码运行的安全；</li>
+<li>提高编译器效率，增加运行速度；</li>
+<li>为未来新版本的Javascript做好铺垫。</li>
+</ol>
+<p><strong>缺点</strong>：</p>
+<p>现在网站的 JS 都会进行压缩，一些文件用了严格模式，而另一些没有。这时这些本来是严格模式的文件，被 merge 后，这个串就到了文件的中间，不仅没有指示严格模式，反而在压缩后浪费了字节。</p>
+<hr>
+<h1 id="从输入-URL-到页面加载完成的过程中都发生了什么事情？"><a href="#从输入-URL-到页面加载完成的过程中都发生了什么事情？" class="headerlink" title="从输入 URL 到页面加载完成的过程中都发生了什么事情？"></a>从输入 URL 到页面加载完成的过程中都发生了什么事情？</h1><ol>
+<li>浏览器接收URL</li>
+<li>将URL与缓存进行比对如果请求的页面在缓存中且未过期，则直接进行第8步</li>
+<li>如果网络地址不是一个 IP 地址，通过DNS解析域名返回一个IP地址</li>
+<li>浏览器与服务器通过三次握手(SYN,SYN/ACK,ACK)建立TCP 连接</li>
+<li>浏览器向服务器发送HTTP请求</li>
+<li>.服务器收到请求，从它的文档空间中查找资源并返回HTTP响应</li>
+<li>浏览器接受 HTTP 响应，检查 HTTP header 里的状态码，并做出不同的处理方式</li>
+<li>如果是可以缓存的，这个响应则会被存储起来</li>
+<li>解码</li>
+<li>渲染</li>
+<li>关闭TCP连接或继续保持连接</li>
+</ol>
+<hr>
+<h1 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>辨别用户身份、进行session跟踪等。</p>
+<p>Cookie中所有<strong>名字和值</strong>都是经过URL编码的</p>
+<ul>
+<li>读取：<code>decodeURIComponent()</code></li>
+<li>设置：<code>encodeURIComponent()</code></li>
+</ul>
+<h2 id="Cookie的构成"><a href="#Cookie的构成" class="headerlink" title="Cookie的构成"></a>Cookie的构成</h2><ul>
+<li>名称name</li>
+<li>值value</li>
+<li>域domain</li>
+<li>路径path</li>
+<li>失效时间expires</li>
+<li>安全标志secure</li>
+</ul>
+<h2 id="操作Cookie"><a href="#操作Cookie" class="headerlink" title="操作Cookie"></a>操作Cookie</h2><p>对于Cookie的操作，可以将各个操作封装到一个对象中。</p>
+<ul>
+<li>读取Cookie：<ol>
+<li>获取要读取的Cookie的name，将<code>name+&quot;=&quot;</code>赋值给一个变量a</li>
+<li>在<code>document.cookie</code>中查找是否有a</li>
+<li>如果有a，则查找<code>document.cookie</code>中从a结束的位置开始后面是否有<code>;</code></li>
+<li>若是没有<code>;</code>表明这个name是最后一个，直接将<code>document.cookie</code>中从a结束的位置开始到最后的值使用<code>decodeURIComponent()</code>解析后return即可</li>
+<li>若是有<code>;</code>，则将<code>document.cookie</code>中从a结束的位置开始到<code>;</code>的位置之间的字符串使用<code>decodeURIComponent()</code>解析后return即可。</li>
+</ol>
+</li>
+<li>设置Cookie：(设置Cookie时，每一部分用<code>&quot;; &quot;</code>隔开)<ol>
+<li>将函数的参数中的<code>name</code>和<code>value</code>使用<code>encodeURIComponent()</code>编码后赋值给a</li>
+<li>检查参数中的<code>expires</code>是否是<code>Date</code>类型的实例，如果是则将<code>expiress</code>使用<code>toGMTString()</code>方法转换为字符串后添加到a的尾部</li>
+<li>依次检查参数中是否有<code>path</code>，<code>domain</code>，<code>secure</code>，若含有则添加到a的尾部</li>
+<li>将a赋值给<code>document.cookie</code></li>
+</ol>
+</li>
+<li>删除Cookie：<ol>
+<li>调用设置Cookie的函数，将value设为<code>&quot;&quot;</code>，将过期时间设置为<code>new Date(0)</code>(new Date(0)得到的是1970年的最早的时间)</li>
+<li>如果设置的时候有<code>path``domain``secure</code>，删除的时候要将同样的参数传递进去</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cookieUtil = &#123;</div><div class="line">    get: <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> cookieName = <span class="built_in">encodeURIComponent</span>(name) + <span class="string">"="</span>,</div><div class="line">            cookieStart = <span class="built_in">document</span>.cookie.indexOf(cookieName),</div><div class="line">            cookieValue = <span class="literal">null</span>;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (cookieStart &gt; <span class="number">-1</span>) &#123;</div><div class="line">            <span class="keyword">var</span> cookieEnd = <span class="built_in">document</span>.cookie.indexOf(<span class="string">';'</span>, cookieStart);</div><div class="line">            </div><div class="line">            <span class="keyword">if</span> (cookieEnd == <span class="number">-1</span>) &#123;</div><div class="line">                cookieEnd = <span class="built_in">document</span>.cookie.length;</div><div class="line">            &#125;</div><div class="line">            cookieValue = <span class="built_in">decodeURIComponent</span>(<span class="built_in">document</span>.cookie.substring(cookieStart + cookieName.length, cookieEnd));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> cookieValue;</div><div class="line">    &#125;,</div><div class="line">    set: <span class="function"><span class="keyword">function</span> (<span class="params">name, value, expires, path, domain, secure</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> cookieText = <span class="built_in">encodeURIComponent</span>(name) + <span class="string">"="</span> + <span class="built_in">encodeURIComponent</span>(value);</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (expires <span class="keyword">instanceof</span> <span class="built_in">Date</span>) &#123;</div><div class="line">            cookieText += <span class="string">"; expires="</span> + expires.toGMTString();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (path) &#123;</div><div class="line">            cookieText += <span class="string">"; path="</span> + path;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (domain) &#123;</div><div class="line">            cookieText += <span class="string">"; domain="</span> + domain;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (secure) &#123;</div><div class="line">            cookieText += <span class="string">"; secure="</span> + secure;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="built_in">document</span>.cookie = cookieText;</div><div class="line">    &#125;,</div><div class="line">    unset: <span class="function"><span class="keyword">function</span> (<span class="params">name, path, domain, secure</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.set(name, <span class="string">""</span>, <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">0</span>), path, domain, secure);</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="关于Cookie的思考"><a href="#关于Cookie的思考" class="headerlink" title="关于Cookie的思考"></a>关于Cookie的思考</h2><p>有一类cookie 被称为“HTTP 专有cookie”，通过cookie结尾添加<code>httpOnly</code>。HTTP 专有cookie 可以从浏览器或者服务器设置，但是只能从服务器端读取，因为JavaScript 无法获取HTTP 专有cookie 的值。</p>
+<hr>
+<h1 id="Storage类型"><a href="#Storage类型" class="headerlink" title="Storage类型"></a>Storage类型</h1><p><code>Storage</code>提供的方法：</p>
+<ul>
+<li><code>clear()</code>删除所有的值</li>
+<li><code>getItem(name)</code>根据指定的名字name获取对应的值</li>
+<li><code>key(index)</code>获取index位置处的值的名字</li>
+<li><code>removeItem(name)</code>删除由name指定的名值对</li>
+<li><code>setItem(name, value)</code>为指定的name设置一个对应的值</li>
+</ul>
+<hr>
+<h1 id="sessionStorage对象"><a href="#sessionStorage对象" class="headerlink" title="sessionStorage对象"></a>sessionStorage对象</h1><p><code>sessionStorage</code>对象绑定于某个服务器会话，<strong>当文件在本地运行的时候是不可用的</strong>。==存储在<code>sessionStorage</code>中的数据只能由最初给对象存储数据的页面访问，所以对多页面应用有限制==。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置数据</span></div><div class="line">sessionStorage.setItem(<span class="string">"name"</span>, <span class="string">"Nicolas"</span>);<span class="comment">//使用方法存储数据</span></div><div class="line">sessionStorage.book = <span class="string">"Professional JavaScript"</span>;<span class="comment">//使用属性存储数据</span></div><div class="line"></div><div class="line"><span class="comment">//获取数据</span></div><div class="line"><span class="keyword">var</span> name = sessionStorage.getItem(<span class="string">"name"</span>);<span class="comment">//使用方法读取数据</span></div><div class="line"><span class="keyword">var</span> book = sessionStorage.book;<span class="comment">//使用属性读取数据</span></div><div class="line"></div><div class="line"><span class="comment">//删除数据</span></div><div class="line"><span class="keyword">delete</span> sessionStorage.name;<span class="comment">//WebKit中无效</span></div><div class="line">sessionStorage.removeItem(<span class="string">"book"</span>);<span class="comment">//使用方法删除一个值</span></div></pre></td></tr></table></figure></p>
+<p>通过结合<code>length</code>属性和<code>key()</code>方法迭代<code>sessionStorage</code>中的值。首先通过key()方法获取指定位置上的名字，然后再通过getItem()找出对应该名字的值。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = sessionStorage.length; i &lt; len; i++) &#123;</div><div class="line">    <span class="keyword">var</span> key = sessionStorage.key(i);<span class="comment">//获取了i出的name</span></div><div class="line">    <span class="keyword">var</span> value = sessionStorage.getItem(key);</div><div class="line">    alert(key + <span class="string">"="</span> + value);  </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//for in版本</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> sessionStorage) &#123;</div><div class="line">    <span class="keyword">var</span> value = sessionStorage.getItem(key);</div><div class="line">    alert(key + <span class="string">"="</span> + value);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="localStorage对象"><a href="#localStorage对象" class="headerlink" title="localStorage对象"></a><code>localStorage</code>对象</h1><p>要访问同一个<code>localStorage</code>对象，页面必须同源(相同的协议，域名，端口号)。</p>
+<p>数据保留到通过JavaScript删除或者是用户清除浏览器缓存。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//使用方法存储数据</span></div><div class="line">localStorage.setItem(<span class="string">"name"</span>, <span class="string">"Nicholas"</span>);</div><div class="line"><span class="comment">//使用属性存储数据</span></div><div class="line">localStorage.book = <span class="string">"Professional JavaScript"</span>;</div><div class="line"><span class="comment">//使用方法读取数据</span></div><div class="line"><span class="keyword">var</span> name = localStorage.getItem(<span class="string">"name"</span>);</div><div class="line"><span class="comment">//使用属性读取数据</span></div><div class="line"><span class="keyword">var</span> book = localStorage.book;</div></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="HTML5离线存储"><a href="#HTML5离线存储" class="headerlink" title="HTML5离线存储"></a>HTML5离线存储</h1><p>优点：</p>
+<ul>
+<li>离线浏览</li>
+<li>已经缓存的资源加载更快</li>
+<li>较少服务器负载：浏览器将只从服务器更新过后更改过的资源</li>
+</ul>
+<hr>
+<h1 id="两栏布局实现"><a href="#两栏布局实现" class="headerlink" title="两栏布局实现"></a>两栏布局实现</h1><h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><p><code>float</code>会使得元素脱离文档流。</p>
+<p>浮动层：给元素的float属性赋值后，就是脱离文档流，进行左右浮动，紧贴着父元素(默认为body文本区域)的左右边框。</p>
+<p>而此浮动元素在文档流空出的位置，由后续的(非浮动)元素填充上去：<strong>块级元素直接填充上去，若跟浮动元素的范围发生重叠，浮动元素覆盖块级元素。内联元素：有空隙就插入。</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"l"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"r"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"c"</span>&gt;</span>内联元素，有空隙就插入。<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.l</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">background-color</span>: red;</div><div class="line">    <span class="attribute">float</span>: left;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.r</span> &#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">background-color</span>: yellow;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.c</span> &#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</div><div class="line">    <span class="attribute">background-color</span>: pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/will-99/image/01d97536e1c92d4a75d2340a97bf39a0af11db2d/img/float1.png" alt="image"></p>
+<h3 id="BFC-Block-Formating-Context-块级格式化上下文"><a href="#BFC-Block-Formating-Context-块级格式化上下文" class="headerlink" title="BFC(Block Formating Context)块级格式化上下文"></a>BFC(Block Formating Context)块级格式化上下文</h3><p><strong>触发BFC常见的情况</strong>：</p>
+<ul>
+<li><code>float</code>的值不为`none</li>
+<li><code>overflow</code>的值为<code>auto</code>，<code>scroll</code>，<code>hidden</code></li>
+<li><code>display</code>的值为<code>table-cell</code>，<code>table-caption</code>，<code>inline-block</code>中任何一个</li>
+<li><code>position</code>的值不为<code>relative</code>和<code>static</code></li>
+</ul>
+<p>普通流体元素BFC后，为了和浮动元素不产生任何交集，顺着浮动边缘形成自己的封闭上下文。<strong>同时元素原本的流体特性依然保留</strong>。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="方法一-利用块状元素流体特性实现"><a href="#方法一-利用块状元素流体特性实现" class="headerlink" title="方法一 利用块状元素流体特性实现"></a>方法一 利用块状元素流体特性实现</h3><p>左侧浮动，右侧加<code>margin-left</code><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"l"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"r"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.l</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">background-color</span>: red;</div><div class="line">    <span class="attribute">float</span>: left;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.r</span> &#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">background-color</span>: yellow;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="方法二-使用BFC自适应布局"><a href="#方法二-使用BFC自适应布局" class="headerlink" title="方法二 使用BFC自适应布局"></a>方法二 使用BFC自适应布局</h3><p>左侧浮动，右侧变为BFC。此时如果需要两栏之间有空隙，在左侧加入<code>margin-right</code>即可。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"l"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"r"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.l</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">background-color</span>: red;</div><div class="line">    <span class="attribute">float</span>: left;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.r</span> &#123;</div><div class="line">    <span class="attribute">height</span>:<span class="number">200px</span>;</div><div class="line">    <span class="attribute">background-color</span>: yellow;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/will-99/image/f6c32fd5f54d6937c4baa1b2d858470d5a801ee8/img/float2.png" alt="image"></p>
+<hr>
+<h1 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
+<li>flex容器(flex container)：采用flex布局的元素</li>
+<li>flex项目(flex item)：flex容器的所有子元素</li>
+<li>水平的主轴(main axis)：<ul>
+<li>main start 主轴开始的位置</li>
+<li>main end 主轴结束的位置</li>
+<li>main size 单个项目占据主轴的空间</li>
+</ul>
+</li>
+<li>垂直的交叉轴(cross axis)：<ul>
+<li>cross start 交叉轴开始的位置</li>
+<li>cross end 交叉轴结束的位置</li>
+<li>cross size 单个项目占据交叉轴的空间</li>
+</ul>
+</li>
+</ul>
+<h2 id="容器属性"><a href="#容器属性" class="headerlink" title="容器属性"></a>容器属性</h2><ul>
+<li>flex-direction</li>
+<li>flex-wrap</li>
+<li>flex-flow</li>
+<li>justify-content</li>
+<li>align-items</li>
+<li>align-content</li>
+</ul>
+<h2 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h2><ul>
+<li>order</li>
+<li>flex-grow</li>
+<li>flex-shrink</li>
+<li>flex-basis</li>
+<li>flex</li>
+<li>align-self</li>
+</ul>
+<hr>
+<h1 id="前端安全问题"><a href="#前端安全问题" class="headerlink" title="前端安全问题"></a>前端安全问题</h1><h2 id="XSS-Cross-Site-Scripting-跨站脚本攻击"><a href="#XSS-Cross-Site-Scripting-跨站脚本攻击" class="headerlink" title="XSS(Cross Site Scripting)跨站脚本攻击"></a>XSS(Cross Site Scripting)跨站脚本攻击</h2><p>攻击者在网页中嵌入客户端脚本，当用户浏览此网页时，脚本就会在用户的浏览器上执行，从而达到攻击者的目的。比如获取用户的Cookie，导航到恶意网站，携带木马等。</p>
+<ul>
+<li>反射XSS(非持久型XSS)：指那些浏览器每次都要在参数中提交恶意数据才能触发的跨站脚本漏洞。</li>
+<li>存储XSS(持久型XSS)：指通过提交恶意数据到存储器，Web应用程序输出的时候是从存储器中读取恶意数据输出到页面的一类跨站脚本漏洞。</li>
+</ul>
+<h3 id="防御方法"><a href="#防御方法" class="headerlink" title="防御方法"></a>防御方法</h3><ol>
+<li><p>使用XSS Filter。</p>
+<blockquote>
+<p>　　输入过滤，对用户提交的数据进行有效性验证，仅接受指定长度范围内并符合我们期望格式的的内容提交，阻止或者忽略除此外的其他任何数据。比如：电话号码必须是数字和中划线组成，而且要设定长度上限。过滤一些些常见的敏感字符，例如：&lt; &gt; ‘ “ &amp; # \ javascript expression  “onclick=”  “onfocus”；过滤或移除特殊的Html标签， 例如: <script>, <iframe> ,  &lt; for &lt;, &gt; for &gt;, &amp;quot for；过滤JavaScript 事件的标签，例如 “onclick=”, “onfocus” 等等。</p>
+<p>　　输出编码，当需要将一个字符串输出到Web网页时，同时又不确定这个字符串中是否包括XSS特殊字符（如&lt; &gt; &amp;‘”等），为了确保输出内容的完整性和正确性，可以使用编码（HTMLEncode）进行处理。</p>
+</blockquote>
+</li>
+<li><p>DOM型的XSS攻击防御</p>
+</li>
+</ol>
+<blockquote>
+<p>把变量输出到页面时要做好相关的编码转义工作，如要输出到 <script>中，可以进行JS编码；要输出到HTML内容或属性，则进行HTML编码处理。根据不同的语境采用不同的编码处理方式。</p>
+</blockquote>
+<ol>
+<li>HttpOnly Cookie<blockquote>
+<p>　　将重要的cookie标记为http only,   这样的话当浏览器向Web服务器发起请求的时就会带上cookie字段，但是在脚本中却不能访问这个cookie，这样就避免了XSS攻击利用JavaScript的document.cookie获取cookie</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="CSRF-Cross-site-request-forgery-跨站点请求伪造"><a href="#CSRF-Cross-site-request-forgery-跨站点请求伪造" class="headerlink" title="CSRF(Cross-site request forgery)跨站点请求伪造"></a>CSRF(Cross-site request forgery)跨站点请求伪造</h2><p>攻击者盗用了你的身份，以你的名义发送恶意请求，对服务器来说这个请求是完全合法的，但是却完成了攻击者所期望的一个操作，比如以你的名义发送邮件、发消息，盗取你的账号，添加系统管理员，甚至于购买商品、虚拟货币转账等。</p>
+<p><strong>CSRF攻击攻击原理及过程如下</strong>：</p>
+<ol>
+<li>用户C打开浏览器，访问受信任网站A，输入用户名和密码请求登录网站A；</li>
+<li>在用户信息通过验证后，网站A产生Cookie信息并返回给浏览器，此时用户登录网站A成功，可以正常发送请求到网站A；</li>
+<li>用户未退出网站A之前，在同一浏览器中，打开一个TAB页访问网站B；</li>
+<li>网站B接收到用户请求后，返回一些攻击性代码，并发出一个请求要求访问第三方站点A；</li>
+<li>浏览器在接收到这些攻击性代码后，根据网站B的请求，在用户不知情的情况下携带Cookie信息，向网站A发出请求。网站A并不知道该请求其实是由B发起的，所以会根据用户C的Cookie信息以C的权限处理该请求，导致来自网站B的恶意代码被执行。 </li>
+</ol>
+<h3 id="CSRF防御"><a href="#CSRF防御" class="headerlink" title="CSRF防御"></a>CSRF防御</h3><ul>
+<li>验证HTTP Refer字段</li>
+<li>在请求地址中添加token并验证</li>
+<li>在HTTP头中自定义属性并验证</li>
+</ul>
+<hr>
+<h1 id="前端跨域的解决方式"><a href="#前端跨域的解决方式" class="headerlink" title="前端跨域的解决方式"></a>前端跨域的解决方式</h1><ul>
+<li><p><strong>CORS</strong>(Cross-Origin Resource Sharing，跨资源共享)。CORS背后的基本思想是使用自定义的HTTP头部让浏览器与服务器进行沟通，从而决定请求或响应是应该成功，还是应该失败。</p>
+<ul>
+<li>IE8中引入了XDR(XDomainRequest)类型。XDR对象的使用方法与XHR对象非常相似。与XHR对象的<code>open()</code>方法不同，XDR对象的<code>open()</code>方法只接收两个参数：请求的类型和URL。<ol>
+<li>创建一个XDomainRequest的实例</li>
+<li>调用<code>open()</code>方法</li>
+<li>调用<code>send()</code>方法</li>
+</ol>
+</li>
+<li><p>其他浏览器的XMLHTTPRequest对象实现了对CORS的原生支持。要请求位于另一个域中的资源时，使用标准的XHR对象并在<code>open()</code>方法中传入<strong>绝对URL</strong>即可。</p>
+<p>跨浏览器的CORS</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createCORSRequest</span>(<span class="params">method, url</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHTTPRequest();</div><div class="line">    <span class="keyword">if</span> (<span class="string">"withCredentials"</span> <span class="keyword">in</span> xhr) &#123;</div><div class="line">        xhr.open(method, url, <span class="literal">true</span>);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> XDomainRequest != <span class="string">"undefined"</span>) &#123;</div><div class="line">        xhr = <span class="keyword">new</span> XDomainRequest();</div><div class="line">        xhr.open(method, url);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        xhr = <span class="literal">null</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> xhr;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> request = createCORSRequest(<span class="string">"get"</span>, <span class="string">"http://www.somewhere-else.com/page/"</span>);</div><div class="line"><span class="keyword">if</span> (request)&#123;</div><div class="line">    request.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="comment">//对request.responseText 进行处理</span></div><div class="line">    &#125;;</div><div class="line">    request.send();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>图像Ping</strong>。通过动态地创建图像，使用它们的<code>onload</code>和<code>onerror</code>事件处理程序来确定是否接收到了响应。图像Ping是与服务器进行简单、<strong>单向</strong>的跨域通信的一种方式。图像Ping有两个主要的缺点，一是只能发送GET请求，二是无法访问服务器的响应文本。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> Image();</div><div class="line">img.onload = img.onerror = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    alert (<span class="string">"Done!"</span>);</div><div class="line">&#125;;</div><div class="line">img.src = <span class="string">"http://www.example.com/test?name=Nicholas"</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>JSONP</strong>，JOSNP是利用script标签可以链接到不同源的js脚本，来达到跨域的目的，将使用json格式的数据用一个函数包裹起来，然后在进行访问的页面中定义一个相同函数名的函数，因为script标签src引用的js脚本到达浏览器时会执行，而此时已经定义了一个同名的函数，所以json格式的数据，就作为参数传递给了我们定义的同名函数了，这样就完成了跨域数据交换。</p>
+<ul>
+<li>优点：与图像Ping相比，它的优点在于能够直接访问响应文本，支持在浏览器与服务器之间双向通信。</li>
+<li>缺点：<ol>
+<li>JSONP是从其他域中加载代码执行的。如果其他域不安全，则会带来威胁，此时除了完全放弃JSONP调用之外，没有办法追究。</li>
+<li>要确定JSONP 请求是否失败并不容易。虽然HTML5 给<script>元素新增了一个onerror事件处理程序，但目前还没有得到任何浏览器支持。为此，开发人员不得不使用计时器检测指定时间内是否接收到了响应。但就算这样也不能尽如人意，毕竟不是每个用户上网的速度和带宽都一样。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong><code>window.name</code></strong>：<code>iframe</code>的<code>src</code>  属性由外域转向本地域，跨域数据即由<code>iframe</code>的<code>window.name</code>从外域传递到本地域。</p>
+<ol>
+<li>在数据页面设置好<code>window.name</code></li>
+<li>在接收页面添加一个<code>src</code>为数据页面的<code>iframe</code>(此时两者不同源)</li>
+<li>将<code>iframe</code>的<code>src</code>属性重新设置为一个空白页(<code>window.name不随URL的跳转而改变</code>。<code>about:blank</code>，<code>javascript:</code>和 <code>data:</code> 中的内容，继承了载入他们的页面的源。此时两者同源)</li>
+<li>在<code>iframe</code>加载时获取<code>iframe</code>的<code>iframe.contentWindow.name</code></li>
+</ol>
+</li>
+<li>postMessage ()：<code>postMessage()</code>是HTML5引入的新的API，<code>postMessage()</code>方法允许来自不同源的脚本采用异步方式进行有限的通信，可以实现跨文本档，多窗口，跨域消息传递。<ul>
+<li>数据页面<code>windowObj.postMessage(message, targetOrigin);</code> 传递数据</li>
+<li>接收页面监听<code>message</code>事件。message 事件就是用来接收 postMessage 发送过来的请求的。函数参数的属性有以下几个：<ul>
+<li>origin: 发送消息的 window 的源。</li>
+<li>data: 数据。</li>
+<li>source: 发送消息的 Window 对象。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="CSS3新特性-最熟悉的"><a href="#CSS3新特性-最熟悉的" class="headerlink" title="CSS3新特性(最熟悉的)"></a>CSS3新特性(最熟悉的)</h1><ul>
+<li>选择器</li>
+<li>特效<ul>
+<li>圆角</li>
+<li>阴影</li>
+<li>渐变</li>
+<li>背景</li>
+<li>边框背景</li>
+<li>变形</li>
+<li>动画</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="HTTP2与HTTP1-1的区别"><a href="#HTTP2与HTTP1-1的区别" class="headerlink" title="HTTP2与HTTP1.1的区别"></a>HTTP2与HTTP1.1的区别</h1><ol>
+<li>HTTP2使用的是二进制传送，HTTP1.X是文本（字符串）传送。<blockquote>
+<p>大家都知道HTTP1.X使用的是明文的文本传送，而HTTP2使用的是二进制传送，二进制传送的单位是帧和流。帧组成了流，同时流还有流ID标示，通过流ID就牵扯出了第二个区别</p>
+</blockquote>
+</li>
+<li>HTTP2支持多路复用<blockquote>
+<p>因为有流ID，所以通过同一个http请求实现多个http请求传输变成了可能，可以通过流ID来标示究竟是哪个流从而定位到是哪个http请求</p>
+</blockquote>
+</li>
+<li>HTTP2头部压缩<blockquote>
+<p>HTTP2通过gzip和compress压缩头部然后再发送，同时客户端和服务器端同时维护一张头信息表，所有字段都记录在这张表中，这样后面每次传输只需要传输表里面的索引Id就行，通过索引ID就可以知道表头的值了</p>
+</blockquote>
+</li>
+<li>HTTP2支持服务器推送<blockquote>
+<p>HTTP2支持在客户端未经请求许可的情况下，主动向客户端推送内容</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h1 id="深拷贝与浅拷贝"><a href="#深拷贝与浅拷贝" class="headerlink" title="深拷贝与浅拷贝"></a>深拷贝与浅拷贝</h1><ul>
+<li>浅复制只复制一层对象的属性</li>
+<li>深复制递归复制所有层级</li>
+</ul>
+<p>==? 数组的深拷贝==(<strong>若是数组内含有数组或对象，下面的两种方法还是浅拷贝</strong>)</p>
+<ul>
+<li>Array.slice()</li>
+<li>Array.concat()</li>
+</ul>
+<p>对象的深拷贝<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepCopy</span> (<span class="params">p, c</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> c = c || &#123;&#125;;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> p) &#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> p[i] === <span class="string">'object'</span>) &#123;</div><div class="line">            c[i] = (p[i].constructor === <span class="built_in">Array</span>) ? [] : &#123;&#125;;</div><div class="line">            deepCopy(p[i], c[i]);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            c[i] = p[i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> c;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h1><ul>
+<li>标记清除：当变量进入环境时，就将这个变量标记为“进入环境”，当变量离开环境时，就将这个变量标记为“离开环境”。</li>
+<li>引用计数：引用计数的含义是跟踪记录每<br>个值被引用的次数。当声明了一个变量并将一个引用类型值赋给该变量时，则这个值的引用次数就是1。<br>如果同一个值又被赋给另一个变量，则该值的引用次数加1。相反，如果包含对这个值引用的变量又取<br>得了另外一个值，则这个值的引用次数减1。<strong>当这个值的引用次数变成0 时</strong>，则说明没有办法再访问这<br>个值了，因而就可以将其占用的内存空间回收回来。这样，<strong>当垃圾收集器下次再运行时，它就会释放那<br>些引用次数为零的值所占用的内存</strong>。</li>
+</ul>
+<hr>
+<h1 id="判断类型的方法"><a href="#判断类型的方法" class="headerlink" title="判断类型的方法"></a>判断类型的方法</h1><ul>
+<li><code>typeof</code></li>
+<li><code>instanceof</code></li>
+<li><code>constructor</code></li>
+<li><code>toString</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="string">'hello'</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);</div><div class="line"><span class="built_in">console</span>.log(a <span class="keyword">instanceof</span> <span class="built_in">String</span>);</div><div class="line"><span class="built_in">console</span>.log(a.constructor === <span class="built_in">String</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(a) === <span class="string">'[object String]'</span>);</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="正则和字符串"><a href="#正则和字符串" class="headerlink" title="正则和字符串"></a>正则和字符串</h1><ul>
+<li>test：<code>pattern.test(string);</code>返回<code>true</code>或<code>false</code></li>
+<li>exec：<code>pattern.exec(string)；</code>返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null。</li>
+</ul>
+<h2 id="字符串可以使用正则的方法"><a href="#字符串可以使用正则的方法" class="headerlink" title="字符串可以使用正则的方法"></a>字符串可以使用正则的方法</h2><ul>
+<li>match</li>
+<li>search</li>
+<li>replace</li>
+<li>split</li>
+</ul>
+<hr>
+<h1 id="prototype-constructor-proto"><a href="#prototype-constructor-proto" class="headerlink" title="prototype,constructor,proto"></a>prototype,constructor,<strong>proto</strong></h1><p><img src="https://raw.githubusercontent.com/will-99/image/8dab8833b1e3395042882171097b326694663d33/img/prototype%20constructor%20__proto__.png" alt="image"></p>
+<hr>
+<h1 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h1><p>事件委托利用了事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。利用冒泡的原理，把事件加到父级上，触发执行效果。</p>
+<p>优点：</p>
+<ul>
+<li>可以大量节省内存占用，较少事件注册</li>
+<li>可以方便地动态添加和修改元素，不需要因为元素的改动而修改事件绑定</li>
+<li>JavaScript和DOM节点之间的关联变少了，这样也就减少了因循环引用而带来的内存泄露发生的概率</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>不是所有的时间都能冒泡。blur、focus、load和unload不能像其它事件一样冒泡。事实上blur和focus可以用事件捕获而非事件冒泡的方法获得（在IE之外的其它浏览器中）。</li>
+</ul>
+<hr>
+<h1 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h1><p>CDN的全称是Content Delivery Network，即内容分发网络。<strong>其基本思路是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定</strong>。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。<strong>其目的是使用户可就近取得所需内容，解决 Internet网络拥挤的状况，提高用户访问网站的响应速度</strong>。</p>
+<hr>
+<h1 id="页面导入样式时，使用link和-import区别"><a href="#页面导入样式时，使用link和-import区别" class="headerlink" title="页面导入样式时，使用link和@import区别"></a>页面导入样式时，使用<code>link</code>和<code>@import</code>区别</h1><ul>
+<li>link属于html标签，而@import是css提供的。</li>
+<li>页面被加载时，link会同时被加载，而@import引用的css会等到页面加载结束后加载。</li>
+<li>link是html标签，因此没有兼容性，而@import只有IE5以上才能识别。</li>
+<li>link方式样式的权重高于@import的。</li>
+</ul>
+<p>@import url(style.css) 和@import url(“style.css”)是最优的选择，兼容的浏览器最多。</p>
+<hr>
+<h1 id="离线应用和客户端存储"><a href="#离线应用和客户端存储" class="headerlink" title="离线应用和客户端存储"></a>离线应用和客户端存储</h1><h2 id="离线检测"><a href="#离线检测" class="headerlink" title="离线检测"></a>离线检测</h2><p>HTML5定义的<code>navigator.onLine</code>属性</p>
+<ul>
+<li><code>true</code>表示设备能上网</li>
+<li><code>false</code>表示设备离线</li>
+</ul>
+<p>两个事件：</p>
+<ul>
+<li><code>inline</code>在线→离线时触发</li>
+<li><code>offline</code>离线→在线时触发<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">EventUtil.addHandler(<span class="built_in">window</span>, <span class="string">"online"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"Online"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="应用缓存"><a href="#应用缓存" class="headerlink" title="应用缓存"></a>应用缓存</h2><p>要将描述文件与页面关联起来，可以在<code>&lt;html&gt;</code>中的manifest属性中指定这个文件的路径。</p>
+</script></p></blockquote></li></ol>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2017/09/07/tell-me-why/">
+        tell me why →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Wpfei. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/will-99" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
