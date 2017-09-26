@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>imgTest | Will-99的日常</title>
+  <title>CSS3 使用linear-gradient制作进度条 | Will-99的日常</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -142,29 +142,54 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2017-09-21T08:53:18.000Z" itemprop="datePublished">
-          2017-09-21
+      <time datetime="2017-09-26T08:25:51.000Z" itemprop="datePublished">
+          2017-09-26
       </time>
     
+    
+    | 
+    <a href='/tags/CSS3-linear-gradient/'>CSS3 linear-gradient</a>
+    
+    
 </span>
-                <h1>imgTest</h1>
+                <h1>CSS3 使用linear-gradient制作进度条</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p><img src="../../public/img/十二.png" alt="image"></p>
+      		<h1 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h1><p></p><p data-height="265" data-theme-id="dark" data-slug-hash="mBOoEw" data-default-tab="css,result" data-user="will-999" data-embed-version="2" data-pen-title="progress bar" class="codepen">See the Pen <a href="https://codepen.io/will-999/pen/mBOoEw/" target="_blank" rel="external">progress bar</a> by will-99 (<a href="https://codepen.io/will-999" target="_blank" rel="external">@will-999</a>) on <a href="https://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<h1 id="创建进度条的步骤"><a href="#创建进度条的步骤" class="headerlink" title="创建进度条的步骤"></a>创建进度条的步骤</h1><ol>
+<li><p>创建一个元素并。</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'prog'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.prog</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>在<code>background-image</code>中使用<code>linear-gradient</code>属性创建一个半透明的渐变层(该层背景是为了是进度条具有视觉上的3D效果，可不加)。</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.prog</span> &#123;</div><div class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(hsla(0, 0%, 100%, 0.05) <span class="number">5%</span>, <span class="built_in">hsla</span>(0,0%,100%,.75) <span class="number">30%</span>, <span class="built_in">hsla</span>(0,0%,100%,0.2), <span class="built_in">hsla</span>(0,0%,100%,0));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>继续在<code>background-image</code>中使用<code>linear-gradient</code>创建一层背景，该背景为滚动条的底色，为两种颜色的条纹，效果如下图所示(图中增加了一圈内阴影)。</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.prog</span> &#123;</div><div class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(hsla(0, 0%, 100%, 0.05) <span class="number">5%</span>, <span class="built_in">hsla</span>(0,0%,100%,.75) <span class="number">30%</span>, <span class="built_in">hsla</span>(0,0%,100%,0.2), <span class="built_in">hsla</span>(0,0%,100%,0)), <span class="built_in">linear-gradient</span>(90deg, #50ff00 50%, #eee 0);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>![image](https://raw.githubusercontent.com/will-99/image/968de3be64c1ab83817ef4c640b06199318fa3c5/img/pb1.png)
+</code></pre><ol>
+<li>将<code>background-size</code>设置为<code>200% 100%</code>,这样进度条中完成部分和未完成部分的长度均为100%，这样便可以通过后续修改<code>background-position</code>来达到进度条滚动的效果。</li>
+<li><p>设置过渡动画，定义<code>keyframes</code>修改<code>background-position</code>从100%到0%，使用线性速度播放动画便完成了最终的滚动条。</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.prog</span> &#123;</div><div class="line">    <span class="attribute">animation</span>:prog <span class="number">6s</span> linear infinite;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@<span class="keyword">keyframes</span> prog &#123;</div><div class="line">    <span class="selector-tag">from</span> &#123;<span class="attribute">background-position</span>: <span class="number">100%</span>;&#125;</div><div class="line">    <span class="selector-tag">to</span> &#123;<span class="attribute">background-position</span>: <span class="number">0%</span>;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h1><h2 id="多层background-image"><a href="#多层background-image" class="headerlink" title="多层background-image"></a>多层<code>background-image</code></h2><p>使用多层<code>background-image</code>时先定义的背景层在上方，后定义的背景层在下方。</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2017/09/26/CSS3-使用linear-gradient制作进度条/" style="float: left;">
-        ← CSS3 使用linear-gradient制作进度条
-    </a>
     
-    
-    <a class="pull-right" href="/2017/09/14/前端面试/">
-        前端面试 →
+    <a class="pull-right" href="/2017/09/21/imgTest/">
+        imgTest →
     </a>
     
 </nav>
